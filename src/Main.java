@@ -11,14 +11,14 @@ public class Main {
 
     private static int computeCommonFacesAround(int[][] A, int i, int j) {
         int ref = A[i][j];
-        int right = A[i][j + 1];
-        int left = A[i][j - 1];
+        int rig = A[i][j + 1];
+        int lef = A[i][j - 1];
         int top = A[i + 1][j];
-        int bottom = A[i - 1][j];
-        return Math.min(ref, right) +
-               Math.min(ref, left) +
+        int bot = A[i - 1][j];
+        return Math.min(ref, rig) +
+               Math.min(ref, lef) +
                Math.min(ref, top) +
-               Math.min(ref, bottom);
+               Math.min(ref, bot);
     }
 
     public static int solution(int[][] A, int cols, int rows) {
